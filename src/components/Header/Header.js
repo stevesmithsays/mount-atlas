@@ -3,16 +3,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+
 const Header = () => (
     <header className="App-header">
-        <h1 className="App-title">Welcome to React</h1>
+        <h1 className="App-title">Mount Atlas</h1>
         <div>
-            <Link to="/">
-                <p>Home</p> 
-            </Link>
-            <Link to="/login">
-                <p>Login</p> 
-            </Link>
+            <nav>
+                <ul>
+                    <Link to="/" className="crap-link">Home</Link>
+                    <br/>
+                    <Link to="/login" className="crap-link">Login</Link>                
+                </ul>
+            </nav>    
         </div>
     </header>
 )
