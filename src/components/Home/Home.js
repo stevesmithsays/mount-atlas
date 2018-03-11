@@ -6,14 +6,22 @@ import { getUser } from "../../ducks/reducer";
 class Home extends Component {
     componentDidMount(){
         this.props.getUser();
-        console.log(this.props.user);
+        console.log(this.props);    
     }
     render(){
         return (
             <div>
-                {this.props.user.name ? <h1>{this.props.user}</h1> : <h1>No User On Session</h1>}
+                {this.props.user.name ? (
+                    <div>
+                        <h1>{this.props.user.authid}</h1>  
+                        <h1>{this.props.user.name}</h1>
+                     </div> 
+                    ) : (
+                        <h1>{this.props.errMessage}</h1>                        
+                    )
+                }
             </div>
-        )
+        );
     }
 }
 

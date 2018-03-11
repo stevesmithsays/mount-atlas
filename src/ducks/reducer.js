@@ -14,30 +14,41 @@ export function getUser(){
         .then(response => {
           return response.data;
         })
-        .catch(console.log)
+        .catch(err => {
+            return err.message;
+        })
     }
 }
+
 
 // INITIAL STATE
 
 const initialState = {
     user: [],
     isLoading: false,
-    didErr: false
+    didErr: false,
+    errMessage: null
 };
 
+// REDUCER 
 export default function reducer( state = initialState, action){
     switch(action.type) {
+      // GET USER CASES
             case `${GET_USER}_PENDING`: 
-            return Object.assign({}, state, {isloading: true})
+            return Object.assign({}, state, {
+            isloading: true})
 
             case `${GET_USER}_FULFILLED`:
             return Object.assign({}, state , {
                 isLoading: false,
-                users: action.payload
+                user: action.payload
             });
             case `${GET_USER}_REJECTED`:
-            return Object.assign({}, state, { isLoading: false, didErr: true});
+            return Object.assign({}, state, {
+                isLoading: false, 
+                didErr: true,
+                errMessage: action.payload
+                });
         default:
             return state;
     }

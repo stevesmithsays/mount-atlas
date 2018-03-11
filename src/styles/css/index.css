@@ -28,10 +28,72 @@ body {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-p {
-  color: green; }
+header {
+  border: 2px solid black; }
 
-.crap-link {
-  color: brown; }
+.logo-container {
+  width: 100%;
+  max-width: 960px;
+  padding: 2px;
+  display: inline-block; }
+
+.site-logo {
+  float: left;
+  border: 1px solid black;
+  padding: 2px;
+  background: lightcoral; }
+
+.site-logo {
+  width: 100px;
+  height: auto; }
+
+h1 {
+  color: black; }
+
+.site-nav {
+  border: 2px solid black;
+  width: 150px; }
+
+.site-nav ul {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 40px;
+  max-width: 80%; }
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: black; }
+
+#home-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #F15E75;
+  color: white; }
+
+#about-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #F1CB6D;
+  color: white; }
+
+#blog-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #57A2AA;
+  color: white; }
+
+#videos-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #645B56;
+  color: white; }
+
+#login-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #677DB7;
+  color: white; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,28 @@
-p{
-  color: green;
-  
+
+header{
+  // background-color: grey;
+  border: 2px solid black;
 }
-.crap-link{
-  color: brown;
+
+.logo-container{
+  width: 100%;
+  max-width: 960px;
+  padding: 2px;
+  
+  display: inline-block;
+}
+
+.site-logo{
+  float: left;
+  border: 1px solid black;
+  padding: 2px;
+  background: lightcoral;
+}
+
+.site-logo{
+  width: 100px;
+  height: auto;
+}
+h1{
+  color: black;
 }

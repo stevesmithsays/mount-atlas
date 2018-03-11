@@ -1,0 +1,57 @@
+.site-nav{
+  // background: khaki;
+  border: 2px solid black;
+  width: 150px;
+}
+
+.site-nav ul {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 40px;
+  max-width: 80%;
+}
+
+.nav-link{
+  text-decoration: none; 
+  font-weight: 600;
+  color: black;
+}
+
+#site-list{
+  // background: green;
+}
+
+#home-link:hover{
+  padding: 2px;
+  margin: 4px;
+  background-color: #F15E75;
+  color: white;
+}
+
+#about-link:hover{
+  padding: 2px;
+  margin: 4px;
+  background-color: #F1CB6D;
+  color: white;
+}
+
+#blog-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #57A2AA;
+  color: white;
+}
+
+#videos-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #645B56;
+  color: white;
+}
+#login-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #677DB7;
+  color: white;
+}

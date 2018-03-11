@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import routes from "./routes";
 
 import Header from "./components/Header/Header";
+import Navigation from "./components/Navigation/Navigation";
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
+        <Navigation/>
           <br/>
         {routes}
       </div>
@@ -19,6 +21,6 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => state;
+// const mapStateToProps = state => state;
 
 export default App;
