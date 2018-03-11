@@ -12,7 +12,7 @@ const Header = () => (
               <h1>Mount Atlas</h1>
           </div>
     </header>
-)
+);
 
 
 export default Header;

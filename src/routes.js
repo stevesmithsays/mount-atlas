@@ -2,12 +2,14 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 
 import Home from './components/Home/Home';
-// import Login from './components/Login/Login';
-// import Header from "./components/Header/Header";
+import About from './components/About/About';
+import Blog from './components/Blog/Blog';
 
 export default(
     <Switch>
-        <Route exact path ="/" component={Home}/>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/About" component={About}/>
+        <Route exact path="/Blog" component={Blog}/>
         <Route path="*"
             render={() => (
                 <div>
@@ -17,3 +19,7 @@ export default(
         />
     </Switch>
 )
+
+
+
+// <Route exact path="/Videos" component={Videos}/>

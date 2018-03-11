@@ -10,7 +10,7 @@ export function getUser(){
     return{
         type: GET_USER,
         payload: axios
-        .get('/api/test')
+        .get('/api/me')
         .then(response => {
           return response.data;
         })
@@ -19,7 +19,6 @@ export function getUser(){
         })
     }
 }
-
 
 // INITIAL STATE
 

@@ -79,11 +79,12 @@ app.get(
   '/auth', 
   passport.authenticate('auth0', {
   successRedirect: 'http://localhost:3000/#/',
-  failureRedirect: 'http://localhost:3000/#/login'
+  failureRedirect: 'http://localhost:3000/#/auth'
   })
 );
 
 app.get('/api/me', (req, res) =>{
+  console.log(req.user);
   if(req.user) {
   res.status(200).json(req.user)
 } else {
