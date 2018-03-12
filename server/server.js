@@ -75,6 +75,9 @@ passport.use(
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
+// ***** ENDPOINTS ******
+
+// AUTHORIZATION
 app.get(
   '/auth', 
   passport.authenticate('auth0', {
@@ -83,8 +86,9 @@ app.get(
   })
 );
 
+// USER ENDPOINT
 app.get('/api/me', (req, res) =>{
-  console.log(req.user);
+  // console.log(req.user);
   if(req.user) {
   res.status(200).json(req.user)
 } else {
@@ -92,28 +96,41 @@ app.get('/api/me', (req, res) =>{
   }
 });
 
-
-app.get("/api/test", (req, res) => {
-  req.app
-  .get('db')
-  .getUser()
-  .then(response => {
-      res.status(200).json(response);
+// PRODUCTS ENDPOINT
+app.get('/api/getproducts', (req, res) => {
+  let db = app.get('db')
+  db.getProducts().then(response => {
+    console.log("get endpoint", response)
+    res.status(200).json(response)
   })
   .catch(err => {
-      res.status(500).json(err)
+    res.status(404).json(err)
   });
 });
 
+// LOGOUT ENDPOINT / SESSION END
 app.get('/api/logout', (req, res) => {
   req.session.destroy( () => {
     res.redirect('http://localhost:3000/#/login');
   });
 });
 
-app.get('/login')
+// app.get('/login')
 
 //** FOR PRODUCTION ONLY **//
+
+// TESTING
+// app.get("/api/test", (req, res) => {
+//   req.app
+//   .get('db')
+//   .getUser()
+//   .then(response => {
+//       res.status(200).json(response);
+//   })
+  // .catch(err => {
+  //     res.status(500).json(err)
+  // });
+// });
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../build/index.html'));

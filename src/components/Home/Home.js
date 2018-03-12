@@ -1,30 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux"; 
+import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
-import { getUser } from "../../ducks/reducer";
+import { getProducts } from "../../ducks/reducer";
+let greeting = "Welcome back ";
 
 class Home extends Component {
     componentDidMount(){
-        this.props.getUser();
-        console.log(this.props);    
+        this.props.getProducts(); 
     }
-    render(){
+    render(){  
         return (
-            <div>
-                {this.props.user.name ? (
-                    <div>
-                        <h1>{this.props.user.authid}</h1>  
-                        <h1>{this.props.user.name}</h1>
-                     </div> 
-                    ) : (
-                        <h1>{this.props.errMessage}</h1>                        
-                    )
-                }
-            </div>
+          <div>
+              
+          </div>
         );
     }
 }
 
 const mapStateToProps = state => state;
 
-export default withRouter(connect(mapStateToProps, { getUser } )(Home));
+export default withRouter(connect(mapStateToProps, { getProducts } )(Home));

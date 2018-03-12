@@ -90,7 +90,7 @@ h1 {
   background-color: #645B56;
   color: white; }
 
-#login-link:hover {
+.login-link:hover {
   padding: 2px;
   margin: 4px;
   background-color: #677DB7;
