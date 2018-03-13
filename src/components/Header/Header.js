@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/reducer";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 let greeting = "Welcome back ";
 
 const siteLogo = require ("../../images/smile.jpg");

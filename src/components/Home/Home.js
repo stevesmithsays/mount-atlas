@@ -3,16 +3,30 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { getProducts } from "../../ducks/reducer";
-let greeting = "Welcome back ";
+
 
 class Home extends Component {
-    componentDidMount(){
+    componentDidMount(props){
         this.props.getProducts(); 
     }
-    render(){  
+    render(){
+      let productList;
+      if(this.props.products.length !== undefined & this.props.products.length !==0){
+        productList = this.props.products.map((curr, index) => {
+          return (
+            <Link to = {`/products/${index}`} key = {index}>
+              <div className="products-container" key = {index}>
+                  <p>{curr.Description}</p>
+                  <img src={require(`../../images/${curr.img}`)} className="product-img" alt="product images"/>
+              </div>
+            </Link>
+          )
+        })
+      }
+      console.log(this.props.products)  
         return (
           <div>
-              
+               {productList}  
           </div>
         );
     }

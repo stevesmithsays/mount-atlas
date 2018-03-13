@@ -96,4 +96,8 @@ h1 {
   background-color: #677DB7;
   color: white; }
 
+.product-img {
+  height: 100px;
+  width: auto; }
+
 /*# sourceMappingURL=index.css.map */
