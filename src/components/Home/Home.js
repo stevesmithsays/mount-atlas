@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { getProducts } from "../../ducks/reducer";
+import { postToCart } from "../../ducks/reducer";
 
 
 class Home extends Component {
@@ -10,20 +11,34 @@ class Home extends Component {
         this.props.getProducts(); 
     }
     render(){
+      console.log("home" , this.props);
+
+      let id = this.props.user.id;
+      let description = this.props.products;
+      let price = this.props.products;
+      
       let productList;
-      if(this.props.products.length !== undefined & this.props.products.length !==0){
+
+      if(this.props.products.length !== undefined && this.props.products.length !==0){
         productList = this.props.products.map((curr, index) => {
           return (
-            <Link to = {`/products/${index}`} key = {index}>
-              <div className="products-container" key = {index}>
-                  <p>{curr.Description}</p>
-                  <img src={require(`../../images/${curr.img}`)} className="product-img" alt="product images"/>
-              </div>
-            </Link>
+            <div className="products-container" key = {index}>
+
+                <Link to = {`/products/${index}`} key = {index}>
+                  <img src={require(`../../images/${curr.img}`)}        className="product-img rotated" alt="product images"/>  
+                </Link>                              
+                
+                  <p className="prod-description">{curr.description}</p>
+                  <p className="prod-price">{curr.price}</p>
+
+                  <button onClick={() => this.props.postToCart(id, curr.description, curr.price)}>smash
+                  </button>
+
+            </div>
           )
         })
       }
-      console.log(this.props.products)  
+      
         return (
           <div>
                {productList}  
@@ -34,4 +49,4 @@ class Home extends Component {
 
 const mapStateToProps = state => state;
 
-export default withRouter(connect(mapStateToProps, { getProducts } )(Home));
+export default withRouter(connect(mapStateToProps, { getProducts, postToCart } )(Home));

@@ -30,9 +30,6 @@ massive(CONNECTION_STRING)
 app.use(json());
 app.use(cors());
 
-//** SERVING PRODUCTION FILES **//
-// app.use(express.static(`${__dirname}/..build/`));
-
 app.use(
   session({
     secret: SESSION_SECRET,
@@ -108,33 +105,29 @@ app.get('/api/getproducts', (req, res) => {
   });
 });
 
+
+
+// POST_TO_CART
+app.post('/api/postcart', (req, res) =>{
+  // let db = app.post('db')
+  const id = req.user.id;
+  const description = req.body.description;
+  const price = req.body.price;
+  req.app.get("db").postToCart(id, description, price).then(cart => {
+    console.log("server post dude", req.user.cart);
+    res.status(200).json(cart);
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+})
+
 // LOGOUT ENDPOINT / SESSION END
 app.get('/api/logout', (req, res) => {
   req.session.destroy( () => {
     res.redirect('http://localhost:3000/#/login');
   });
 });
-
-// app.get('/login')
-
-//** FOR PRODUCTION ONLY **//
-
-// TESTING
-// app.get("/api/test", (req, res) => {
-//   req.app
-//   .get('db')
-//   .getUser()
-//   .then(response => {
-//       res.status(200).json(response);
-//   })
-  // .catch(err => {
-  //     res.status(500).json(err)
-  // });
-// });
-
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../build/index.html'));
-// })
 
 app.listen(port, () =>{
   console.log(`jammin' on teh Port: ${port} mon`);

@@ -96,8 +96,18 @@ h1 {
   background-color: #677DB7;
   color: white; }
 
+.products-container {
+  background-color: grey;
+  display: inline-block;
+  padding: 21px 4px;
+  width: 100%;
+  max-width: 120px; }
+
 .product-img {
   height: 100px;
   width: auto; }
+
+.rotated {
+  transform: rotate(90deg); }
 
 /*# sourceMappingURL=index.css.map */
