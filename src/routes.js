@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Videos from './components/Videos/Videos';
 import Product from './components/Product/Product';
+import Cart from "./components/Cart/Cart";
 
 export default(
     <Switch>
@@ -14,6 +15,7 @@ export default(
         <Route exact path="/Blog" component={Blog}/>
         <Route exact path="/Videos" component={Videos}/>
         <Route exact path ="/Product/:id" component={Product}/>
+        <Route exact path ="/Cart" component={Cart}/>
         <Route path="*"
             render={() => (
                 <div>

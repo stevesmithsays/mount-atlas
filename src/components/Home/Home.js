@@ -11,7 +11,7 @@ class Home extends Component {
         this.props.getProducts(); 
     }
     render(){
-      console.log("home" , this.props);
+      console.log("again from home" , this.props);
 
       let id = this.props.user.id;
       let description = this.props.products;
@@ -31,8 +31,8 @@ class Home extends Component {
                   <p className="prod-description">{curr.description}</p>
                   <p className="prod-price">{curr.price}</p>
 
-                  <button onClick={() => this.props.postToCart(id, curr.description, curr.price)}>smash
-                  </button>
+                  <Link to="/Cart"><button onClick={() => this.props.postToCart(id, curr.description, curr.price)}>smash
+                  </button></Link>
 
             </div>
           )
@@ -50,3 +50,5 @@ class Home extends Component {
 const mapStateToProps = state => state;
 
 export default withRouter(connect(mapStateToProps, { getProducts, postToCart } )(Home));
+
+// <Link to = {`/products/${index}`} key = {index}>

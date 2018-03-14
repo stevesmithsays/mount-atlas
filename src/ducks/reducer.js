@@ -50,6 +50,22 @@ export function getProducts(){
   }
 }
 
+// GET DAT CART
+export function getDatCart(){
+  return{
+    type: GET_DAT_CART,
+    payload: axios
+    .get('/api/getdatcart')
+    .then(res => {
+      console.log(res);
+      return res.data;
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+}
+
 // ADD TO CART
 export function postToCart(id, description, price){
   return{
@@ -63,8 +79,7 @@ export function postToCart(id, description, price){
   }
 }
 
-// GET THE CART
-  
+
 
 // REDUCER 
 export default function reducer( state = initialState, action){

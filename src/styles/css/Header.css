@@ -5,7 +5,8 @@ header {
   width: 100%;
   max-width: 960px;
   padding: 2px;
-  display: inline-block; }
+  margin: 5px;
+  display: block; }
 
 .site-logo {
   float: left;

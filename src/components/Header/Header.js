@@ -4,7 +4,7 @@ import { getUser } from "../../ducks/reducer";
 // import { Link } from "react-router-dom"
 let greeting = "Welcome back ";
 
-const siteLogo = require ("../../images/smile.jpg");
+const siteLogo = require ("../../images/cupOJoe.jpg");
 
 class Header extends Component {
   componentDidMount(){
@@ -35,12 +35,3 @@ class Header extends Component {
 const mapStateToProps = state => state;
 
 export default connect(mapStateToProps, { getUser })(Header);
-
-// const Header = () => (
-//       <header>
-//             <div className="logo-container">
-//                 <img src={siteLogo} className="site-logo" alt="site logo"/>
-//                 <h1>Mount Atlas</h1>
-//             </div>    
-//       </header>
-//   );

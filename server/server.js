@@ -105,8 +105,6 @@ app.get('/api/getproducts', (req, res) => {
   });
 });
 
-
-
 // POST_TO_CART
 app.post('/api/postcart', (req, res) =>{
   // let db = app.post('db')
