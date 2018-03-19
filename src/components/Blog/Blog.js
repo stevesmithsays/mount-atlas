@@ -5,9 +5,15 @@ import React from 'react';
 const Blog = () => (
   <div>
     <div className="blog-container">
-      <p>
-        Blog Component
-      </p>
+        <div id="atlas-logo">
+          <h1>Blogging <br/> Soon.</h1>
+          <div className="shape-holder">
+            <div id ="parallelogram"></div>
+            <div id ="parallelogram2"></div>
+            <div id ="parallelogram3"></div>
+            <div id ="parallelogram4"></div>
+          </div>
+        </div>
     </div>
   </div>
 );

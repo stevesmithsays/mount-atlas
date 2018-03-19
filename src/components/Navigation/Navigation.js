@@ -12,6 +12,10 @@ const Navigation = (props) => (
       <li><Link to="/about" className="nav-link" id="about-link">About</Link></li>
       <li><Link to="/blog" className="nav-link" id="blog-link">Blog</Link></li>
       <li><Link to="/videos" className="nav-link" id="videos-link">Videos</Link></li>
+      
+
+      {props.user.id ?
+      <li><Link to="/cart" className="nav-link" id="cart-link">Cart</Link></li> : <li><li><Link to="/cart" className="nav-link" id="cart-link">No Cart</Link></li></li>}
 
       {props.user.id ? 
         <li><a href={process.env.REACT_APP_LOGOUT} className="nav-link login-link">Logout</a></li> : <li><a href={process.env.REACT_APP_LOGIN} className="nav-link login-link">Login</a></li>}         
@@ -24,3 +28,5 @@ const Navigation = (props) => (
 const mapStateToProps= state => state;
 
 export default connect(mapStateToProps)(Navigation);
+
+<li><Link to="/videos" className="nav-link" id="videos-link">Videos</Link></li>

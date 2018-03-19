@@ -1,0 +1,41 @@
+.detail-container {
+  background-color: grey;
+  outline: 2px solid black;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 2px;
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  bottom: 200px;
+  text-align: left; }
+
+.detail-header {
+  margin: 1px;
+  outline: 2px solid black; }
+
+.detail-description {
+  display: inline;
+  position: relative;
+  text-align: left; }
+
+.image-container {
+  background-color: green;
+  outline: 2px solid black;
+  width: 70%;
+  margin: 1rem auto;
+  padding: 1px; }
+
+.product-img {
+  margin: 2px;
+  margin-top: 6px; }
+
+.detail-price {
+  margin: 1px;
+  outline: 2px solid black; }
+
+.detail-qty {
+  margin: 0 4px; }
+
+/*# sourceMappingURL=Detail.css.map */

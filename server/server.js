@@ -36,7 +36,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       cookie: {
-          maxAge: 100000
+          maxAge: 7000000
           }
   })
 )
@@ -72,6 +72,8 @@ passport.use(
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
+
+
 // ***** ENDPOINTS ******
 
 // AUTHORIZATION
@@ -97,7 +99,7 @@ app.get('/api/me', (req, res) =>{
 app.get('/api/getproducts', (req, res) => {
   let db = app.get('db')
   db.getProducts().then(response => {
-    console.log("get endpoint", response)
+    // console.log("get endpoint", response)
     res.status(200).json(response)
   })
   .catch(err => {
@@ -105,14 +107,24 @@ app.get('/api/getproducts', (req, res) => {
   });
 });
 
+
 // POST_TO_CART
 app.post('/api/postcart', (req, res) =>{
-  // let db = app.post('db')
   const id = req.user.id;
   const description = req.body.description;
   const price = req.body.price;
   req.app.get("db").postToCart(id, description, price).then(cart => {
-    console.log("server post dude", req.user.cart);
+    res.status(200).json(cart);
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+})
+
+// UPDATE QUANTITY / PUT
+app.put('/api/updatecart',(req, res) => {
+  console.log("qty value from server", req.body);
+  req.app.get("db").updateQty(req.body.qty, req.body.order_id).then(cart => {
     res.status(200).json(cart);
   })
   .catch(err => {
@@ -123,10 +135,59 @@ app.post('/api/postcart', (req, res) =>{
 // LOGOUT ENDPOINT / SESSION END
 app.get('/api/logout', (req, res) => {
   req.session.destroy( () => {
-    res.redirect('http://localhost:3000/#/login');
+    res.redirect('http://localhost:3000/#/');
   });
 });
 
 app.listen(port, () =>{
   console.log(`jammin' on teh Port: ${port} mon`);
 });
+
+
+// Hosting purposes
+// Digital Ocean
+
+// app.use(express.static(`${__dirname}/../build`))
+// in terminal yarn build
+// can then view build folder
+// then const pth =require('path');
+
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../build.index.html'));
+// });
+
+// ssh key thangs
+// in terminal 
+// save ssh key 
+
+// create droplet
+// in auth0 insert IP address in Allowed Web Origins & and Allowed CallbackURL (in call back URL suffix with 'callback')
+
+// in terminal type: SST root@'given IP Address'
+
+// in terminal
+// apt-get update && apt-get dist-upgrade
+// apt-get install nodejs -y;apt-get install npm -y;
+// npm i -g n;
+
+// in another terminal 
+// from src type: node -v (to check version of node) 
+// THEN type n "version of node"
+// cd ~
+// go to project (make sure you have most current code)
+// go to your github account and grab URL to clone
+// go back to droplet in terminal 
+// type git clone and paste URL in root of ubuntu
+// cd into new directory and creat new .env (touch .env)
+// type nano .env (should bring you to terminal text editor)
+// copy and paste .env file into this nano file
+// anywhere Local host is you have to replace with IP Address
+// get out of nano (ctrl x)
+// select y (for yes)
+// leave file as .env
+// run npm i from root ubuntu (takes a while)
+// type 'npm run build'
+// node server/server.js
+// go to ip address : 3001
+// npm i -g pm2 (to keep website running)

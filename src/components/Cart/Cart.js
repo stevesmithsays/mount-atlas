@@ -1,35 +1,59 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getDatCart } from "../../ducks/reducer";
-
-
-
+import { updateQty } from "../../ducks/reducer";
 
 class Cart extends Component {
-  componentDidMount(){
-    this.props.getDatCart();
-  }
+    constructor(){
+      super()
+      this.state = {
+        qty: [],
+        order_id: []
+      }
+      this.qtyHandler = this.qtyHandler.bind(this);
+    }
+      qtyHandler (qty, order_id) {
+        this.setState({
+          qty: qty,
+          order_id: order_id
+        })
+        console.log( qty, this.state.order_id);
+      }
   render(){
-    console.log("cart log baby" , this.props.cart);
+    let neededQty = parseInt(this.state.qty);
+    console.log("cart log now", typeof neededQty);
     let grabbedItem;
-    
-    if(this.props.cart.length !== undefined && this.props.cart.length !== 0){
+  
+    if(this.props.cart !== undefined && this.props.cart.length !== 0){
       grabbedItem = this.props.cart.map((curr, index) => {
+        
         return (
-          <div>
-            <h1>{curr.description}</h1>
+          <div className="cart-container" key = {index}> 
+            <h1 className="cart-header">Shopping Cart</h1>
+            <p className="cart-description">{curr.description}</p>
+            <p className="cart-price">${curr.price}</p>
+
+            <div className="image-container">
+              <img src={curr.img ? require(`../../images/${curr.img}`) : null} className="product-img rotated" alt="product images"/>
+              <p className="cart-qty">Quantity{curr.qty}</p>
+              <input className="cart-input" type="number" onChange={(e) => this.qtyHandler(e.target.value, curr.order_id)}/>
+              <button onClick={() =>{this.props.updateQty(neededQty, this.state.order_id)}}>
+              Add Qty
+              </button>    
+              <button>Remove</button>
+            </div>
           </div>)
       })
     }
     return(
-      <div>
-        Cart Component
-        {grabbedItem}
-      </div>
+      
+        <div>
+          {grabbedItem}
+        </div>
+      
     )
   }
 }
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, {getDatCart})(Cart);
+export default connect(mapStateToProps,{ updateQty })(Cart);

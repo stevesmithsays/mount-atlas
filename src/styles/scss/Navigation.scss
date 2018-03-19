@@ -1,32 +1,34 @@
 .site-nav{
-  // background: khaki;
+  overflow: auto;
   border: 2px solid black;
-  width: 150px;
+  width: 130px;
+  text-align: left;
+  margin: 2px;
 }
 
 .site-nav ul {
+  position: relative;
   list-style: none;
   text-decoration: none;
-  text-align: center;
-  margin-right: 40px;
-  max-width: 80%;
+  padding: 4px;
+  
 }
 
 .nav-link{
   text-decoration: none; 
   font-weight: 600;
   color: black;
+  margin-top: 6px;
 }
 
-#site-list{
-  // background: green;
-}
 
 #home-link:hover{
   padding: 2px;
   margin: 4px;
   background-color: #F15E75;
   color: white;
+  // box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+  transition: .2s all ease-out;
 }
 
 #about-link:hover{
@@ -34,6 +36,7 @@
   margin: 4px;
   background-color: #F1CB6D;
   color: white;
+  transition: .2s all ease-out;
 }
 
 #blog-link:hover {
@@ -41,17 +44,30 @@
   margin: 4px;
   background-color: #57A2AA;
   color: white;
+  transition: .2s all ease-out;
 }
 
 #videos-link:hover {
   padding: 2px;
   margin: 4px;
-  background-color: #645B56;
+  background-color: #3d3d52;
   color: white;
+  transition: .2s all ease-out;
 }
-.login-link:hover {
+
+#cart-link:hover {
   padding: 2px;
   margin: 4px;
   background-color: #677DB7;
   color: white;
+  transition: .2s all ease-out;
 }
+
+.login-link:hover {
+  padding: 2px;
+  margin: 4px;
+  background-color: #000000;
+  color: #F15E75;
+  transition: .2s all ease-out;
+}
+

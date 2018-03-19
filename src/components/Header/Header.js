@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/reducer";
 // import { Link } from "react-router-dom"
-let greeting = "Welcome back ";
+let greeting = "Hey there ";
 
-const siteLogo = require ("../../images/cupOJoe.jpg");
+// const siteLogo = require ("../../images/cupOJoe.jpg");
 
 class Header extends Component {
   componentDidMount(){
@@ -15,10 +15,19 @@ class Header extends Component {
         <div>
           <header>
               <div className="logo-container">
-                  <img src={siteLogo} className="site-logo" alt="site logo"/>
-                  <h1>Mount Atlas</h1>
+            
+                  <div id="atlas-logo">
+                    <h1>Mount <br/> Atlas.</h1>
+                    <div className="shape-holder">
+                      <div id ="parallelogram"></div>
+                      <div id ="parallelogram2"></div>
+                      <div id ="parallelogram3"></div>
+                      <div id ="parallelogram4"></div>
+                    </div>
+                  </div>
+
                   {this.props.user.name ? (
-                    <p className="welcome-greeting">{greeting}
+                    <p id="welcome-greeting">{greeting}
                     {this.props.user.name}</p>
                     ) : (
                       <h1>{this.props.errMessage}</h1> 

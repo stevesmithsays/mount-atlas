@@ -11,8 +11,7 @@ class Home extends Component {
         this.props.getProducts(); 
     }
     render(){
-      console.log("again from home" , this.props);
-
+    console.log("from home", this.props);
       let id = this.props.user.id;
       let description = this.props.products;
       let price = this.props.products;
@@ -22,26 +21,32 @@ class Home extends Component {
       if(this.props.products.length !== undefined && this.props.products.length !==0){
         productList = this.props.products.map((curr, index) => {
           return (
-            <div className="products-container" key = {index}>
+              <div className="product-box" key = {index}>
+                  <Link to = {`/product/${index}`} key = {index}>
+                    <img src={require(`../../images/${curr.img}`)} className="product-photo rotated" alt="product images"/>  
+                  </Link>                              
+                  
+                    <div className="prod-thing">
+                      <p>{curr.description}</p>
+                      <p>${curr.price}</p>
+                    </div>
 
-                <Link to = {`/products/${index}`} key = {index}>
-                  <img src={require(`../../images/${curr.img}`)}        className="product-img rotated" alt="product images"/>  
-                </Link>                              
+                    <Link to="/Cart">
+                    
+                      <button className="add-btn" onClick={() => this.props.postToCart(curr.order_id, curr.description, curr.price)}>Send It
+                      </button>
                 
-                  <p className="prod-description">{curr.description}</p>
-                  <p className="prod-price">{curr.price}</p>
-
-                  <Link to="/Cart"><button onClick={() => this.props.postToCart(id, curr.description, curr.price)}>smash
-                  </button></Link>
-
-            </div>
+                    </Link>   
+              </div>
           )
         })
       }
       
         return (
-          <div>
-               {productList}  
+          <div className="shop">
+            <div className="shop-container">
+                {productList}  
+            </div>
           </div>
         );
     }

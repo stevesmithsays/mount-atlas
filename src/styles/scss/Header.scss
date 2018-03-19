@@ -9,8 +9,8 @@ header{
   max-width: 960px;
   padding: 2px;
   margin: 5px;
-  display: block;
 }
+
 
 .site-logo{
   float: left;
@@ -23,6 +23,82 @@ header{
   width: 100px;
   height: auto;
 }
+
 h1{
+  max-width: 225px;
+  margin: 0 auto;
   color: black;
+  display: inline-block;
+}
+
+#atlas-logo{
+  // background: white;
+  text-align: left;
+  border: 2px solid black;
+  outline: 2px solid white;
+  display: block;
+  max-width: 225px;
+}
+
+.shape-holder{
+  display: block;
+  position: relative;
+  max-width: 100%;
+  position: relative;
+  background: #3d3d52;
+  line-height: 2px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#parallelogram {
+  display: inline-block;
+  position: inherit;
+  margin:0 auto;
+	width: 15%;
+	height: 20px;
+	-webkit-transform: skew(-40deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(30deg);
+	background: #677DB7;
+}
+
+#parallelogram2 {
+  display: inline-block;
+  // position:fixed;
+  margin:0 auto;
+	width: 15%;
+	height: 20px;
+	-webkit-transform: skew(-40deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(30deg);
+	background: #F1CB6D;
+}
+
+#parallelogram3 {
+  display: inline-block;
+  // position:fixed;
+  margin:0 auto;
+	width: 15%;
+	height: 20px;
+	-webkit-transform: skew(-40deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(30deg);
+	background: #57A2AA;
+}
+
+#parallelogram4 {
+  display: inline-block;
+  // position:fixed;
+  margin:0 auto;
+	width: 15%;
+	height: 20px;
+	-webkit-transform: skew(-40deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(30deg);
+	background: #F15E75;
+}
+#welcome-greeting{
+  color:black;
+  font-weight: 700;
 }
