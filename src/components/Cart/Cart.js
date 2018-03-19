@@ -28,18 +28,24 @@ class Cart extends Component {
         
         return (
           <div className="cart-container" key = {index}> 
-            <h1 className="cart-header">Shopping Cart</h1>
-            <p className="cart-description">{curr.description}</p>
-            <p className="cart-price">${curr.price}</p>
+            <h1 className="cart-header">Shopping Cart.</h1>
+            
 
             <div className="image-container">
-              <img src={curr.img ? require(`../../images/${curr.img}`) : null} className="product-img rotated" alt="product images"/>
-              <p className="cart-qty">Quantity{curr.qty}</p>
+
+              <img src={curr.img ? require(`../../images/${curr.img}`) : null} className="product-img" alt="product images"/>
+
+              <p className="cart-description">{curr.description}</p>
+              <p className="cart-price">${curr.price}</p>          
+              <p className="cart-qty">{curr.qty}</p>
+
               <input className="cart-input" type="number" onChange={(e) => this.qtyHandler(e.target.value, curr.order_id)}/>
-              <button onClick={() =>{this.props.updateQty(neededQty, this.state.order_id)}}>
+
+              <button className="add-bttn" onClick={() =>{this.props.updateQty(neededQty, this.state.order_id)}}>
               Add Qty
               </button>    
-              <button>Remove</button>
+              <button className="add-bttn">Order</button>
+              <button className="add-bttn">Remove</button>
             </div>
           </div>)
       })

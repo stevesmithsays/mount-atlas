@@ -1,68 +1,78 @@
 .shop-container {
   overflow-y: scroll;
-  padding: 15px;
+  padding: 20px 50px;
   width: 50%;
   outline: 2px solid black;
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  bottom: 200px; }
+  bottom: 554px; }
 
 .product-box {
-  background: lightgray;
   display: inline-block;
   align-content: center;
-  outline: 1px solid black;
   position: relative;
   padding: 4px;
-  margin: 0 2px;
+  margin: 6px 2px;
   padding: 4px;
   max-width: 30%;
   min-width: 10%;
   height: auto; }
 
+.product-box:hover {
+  background: #cccbcb;
+  transition: .4s all ease-out; }
+
 .product-photo {
-  background: lightcoral;
+  outline: 2px solid white;
+  background: #3d3d52;
   position: relative;
-  max-width: 65%;
-  margin: 0 auto;
+  margin: 2px auto;
+  max-width: 95%;
+  min-width: 70%;
   height: auto;
   display: inline-block;
   padding: 2px; }
 
 .product-photo:hover {
-  transition: .08s all ease-out;
-  outline: 2px solid #57A2AA; }
+  transition: .2s all ease-out;
+  outline: 2px solid #3d3d52; }
 
 .rotated {
   transform: rotate(90deg); }
 
 .prod-thing {
   display: block;
-  padding: 0 2px;
-  max-width: 50%;
-  min-width: 30%;
+  text-align: center;
+  padding: 1px 2px;
+  max-width: 80%;
+  min-width: 50%;
   margin: 1px auto;
-  background: #677DB7;
-  font-size: 1em; }
+  outline: 1px solid black;
+  background: #57A2AA; }
 
 .prod-thing p {
-  color: #d4d4d4;
+  color: #448087;
   font-size: .50em;
   font-weight: 700;
   margin: 0; }
 
+.prod-thing p:hover {
+  transition: .2s all ease-out;
+  color: white; }
+
 .add-btn {
+  background: #57A2AA;
   display: inline-block;
   position: relative;
   margin: 0 auto;
-  min-widht: 45%;
+  color: white;
+  font-weight: 700;
   padding: 3px; }
 
 .add-btn:hover {
-  background-color: #F15E75;
-  font-style: italic;
-  color: white;
+  background-color: white;
+  color: #448087;
   font-weight: 700;
   transition: .2s all ease-out; }
 

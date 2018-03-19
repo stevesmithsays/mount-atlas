@@ -5,7 +5,7 @@ import React from 'react';
 const Blog = () => (
   <div>
     <div className="blog-container">
-        <div id="atlas-logo">
+        <div className="blog-atlas-logo">
           <h1>Blogging <br/> Soon.</h1>
           <div className="shape-holder">
             <div id ="parallelogram"></div>

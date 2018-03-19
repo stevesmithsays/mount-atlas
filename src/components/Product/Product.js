@@ -23,7 +23,7 @@ class Product extends Component {
     return(
       <div className="product-container">
         <div className="description-container">
-        <Link to="/"><img src={require(`../../images/${currentPhoto}`)} className="product-foto rotated"/></Link>
+        <Link to="/"><img src={require(`../../images/${currentPhoto}`)} className="product-foto"/></Link>
           <p className="product-description">{currentDescription}</p>
           <p className="product-price">${currentPrice}</p>
           <p className="product-blurb">

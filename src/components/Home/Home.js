@@ -23,13 +23,13 @@ class Home extends Component {
           return (
               <div className="product-box" key = {index}>
                   <Link to = {`/product/${index}`} key = {index}>
-                    <img src={require(`../../images/${curr.img}`)} className="product-photo rotated" alt="product images"/>  
+                    <img src={require(`../../images/${curr.img}`)} className="product-photo" alt="product images"/>  
                   </Link>                              
                   
                     <div className="prod-thing">
                       <p>{curr.description}</p>
                       <p>${curr.price}</p>
-                    </div>
+                      </div>
 
                     <Link to="/Cart">
                     

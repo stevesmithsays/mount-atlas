@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/reducer";
 // import { Link } from "react-router-dom"
-let greeting = "Hey there ";
+let greeting = "Welcome Back ";
 
 // const siteLogo = require ("../../images/cupOJoe.jpg");
 
@@ -25,15 +25,16 @@ class Header extends Component {
                       <div id ="parallelogram4"></div>
                     </div>
                   </div>
-
-                  {this.props.user.name ? (
-                    <p id="welcome-greeting">{greeting}
-                    {this.props.user.name}</p>
-                    ) : (
-                      <h1>{this.props.errMessage}</h1> 
-                    )
-                  }                        
-              </div>         
+              </div>    
+              <div className="greeting-container">
+              {this.props.user.name ? (
+                <p id="welcome-greeting">{greeting}
+                {this.props.user.name}</p>
+                ) : (
+                  <h1>{this.props.errMessage}</h1> 
+                )
+              }                        
+            </div>     
           </header>          
         </div>
           

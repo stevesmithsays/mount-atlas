@@ -4,7 +4,7 @@ import React from 'react';
 const About = () => (
   <div>
     <div className="about-container">
-      <div id="atlas-logo">
+      <div className="about-atlas-logo">
         <h1>We're <br/> On It.</h1>
         <div className="shape-holder">
           <div id ="parallelogram"></div>

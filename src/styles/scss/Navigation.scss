@@ -1,9 +1,12 @@
 .site-nav{
+  outline: 2px solid black;
+  background-color: white;
   overflow: auto;
-  border: 2px solid black;
-  width: 130px;
+  width: 15%;
   text-align: left;
   margin: 2px;
+  margin-right: 10px;
+  z-index: 1000;
 }
 
 .site-nav ul {
@@ -11,19 +14,22 @@
   list-style: none;
   text-decoration: none;
   padding: 4px;
-  
+  line-height: 80px;
 }
 
 .nav-link{
+  font-size: 1.5rem;
+  line-height: 10px;
   text-decoration: none; 
   font-weight: 600;
-  color: black;
-  margin-top: 6px;
+  color: #3d3d52;
+  margin: 6px;
+  margin-top: 10px;
 }
 
 
 #home-link:hover{
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #F15E75;
   color: white;
@@ -32,7 +38,7 @@
 }
 
 #about-link:hover{
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #F1CB6D;
   color: white;
@@ -40,7 +46,7 @@
 }
 
 #blog-link:hover {
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #57A2AA;
   color: white;
@@ -48,7 +54,7 @@
 }
 
 #videos-link:hover {
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #3d3d52;
   color: white;
@@ -56,7 +62,7 @@
 }
 
 #cart-link:hover {
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #677DB7;
   color: white;
@@ -64,7 +70,7 @@
 }
 
 .login-link:hover {
-  padding: 2px;
+  padding: 15px;
   margin: 4px;
   background-color: #000000;
   color: #F15E75;

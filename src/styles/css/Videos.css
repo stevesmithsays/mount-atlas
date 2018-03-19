@@ -1,7 +1,9 @@
 .videos-container {
+  position: relative;
   background-color: #3d3d52; }
 
-#video-h1 {
-  color: white; }
+.video-atlas-logo h1 {
+  color: white;
+  font-size: 3rem; }
 
 /*# sourceMappingURL=Videos.css.map */

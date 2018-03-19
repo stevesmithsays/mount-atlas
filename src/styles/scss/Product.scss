@@ -1,15 +1,13 @@
 .product-container{
-  background-color: #677DB7;
+  background-color: #F1CB6D;
   outline: solid black 2px;
   position: relative;
   display: block;
-  text-align: center;
   margin: 10px auto;
-  padding: 2px;
-  width: 100%;
-  max-width: 350px;
-  height: 20%;
-  bottom: 200px;
+  padding: 20px;
+  width: 40%;
+  height: 40%;
+  bottom: 555px;
   text-align: left;
 }
 
@@ -28,32 +26,29 @@
 
 .product-foto{
   position: relative;
-  width: 60%;
-  max-width: 62%;
+  width: 70%;
+  max-width: 75%;
   margin: 0 auto;
   height: auto;
   display: inline-block;
   padding: 2px;
-  // outline: 2px solid white;
+  outline: 2px solid #3c496f;
 }
 
 .product-foto:hover{
+  transition: .1s all ease-out;
   outline: 2px solid white;
-  transition: .1s all ease-out;
-  width:62%;
-}
-
-.product-foto:hover{
   box-shadow: 0 4px 10px 0 #00000063, 0 0 0 1px #00000014;
-  transition: .1s all ease-out;
+  width:75%;
 }
 
 .product-description{
   margin: 0 1px;
   font-weight: 700;
-  color: #5d71a8;
-  background-color:#F1CB6D;
-  outline: 2px solid #80682d;
+  font-size: 2rem;
+  color: #F1CB6D;
+  background-color: #5d71a8;
+  outline: 2px solid #3c496f;
   
 }
 
@@ -61,12 +56,14 @@
   transition: .3s all ease-out;
   background-color:#F1CB6D;
   outline: 2px solid #80682d;
+  color:#5d71a8;
 }
 
 .product-price{
-  background-color:#F1CB6D;
-  outline: 2px solid #80682d;
+  background-color: #5d71a8;
   color: #F1CB6D;
+  outline: 2px solid #3c496f;
+  font-size: 1.9rem;
   margin: 1px;
   margin-top: 3px;
   font-weight: 700;
@@ -74,14 +71,15 @@
 
 .product-price:hover{
   transition: .2s all ease-out;
-  color: white;
+  color: #5d71a8;
   background-color:#F1CB6D;
   outline: 2px solid #80682d;
 }
 
 .product-blurb{
-  color: #677DB7;
+  color: #F1CB6D;
   font-weight: 700;
+  font-size: 2rem;
   padding: 1px;
   margin: 0 auto;
   text-align: left;
@@ -89,7 +87,7 @@
 
 .product-blurb:hover{
   transition: .3s all ease-out;
-  color: #F1CB6D;
+  color: #5d71a8;
   // background-color:#F1CB6D;
   // outline: 2px solid #80682d; 
 }

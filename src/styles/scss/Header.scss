@@ -1,7 +1,9 @@
 
 header{
   // background-color: grey;
-  border: 2px solid black;
+  outline: 2px solid black;
+  margin: 0;
+  padding: 4px;
 }
 
 .logo-container{
@@ -11,33 +13,22 @@ header{
   margin: 5px;
 }
 
-
-.site-logo{
-  float: left;
-  border: 1px solid black;
-  padding: 2px;
-  background: lightcoral;
-}
-
-.site-logo{
-  width: 100px;
-  height: auto;
-}
-
-h1{
-  max-width: 225px;
-  margin: 0 auto;
-  color: black;
-  display: inline-block;
-}
-
 #atlas-logo{
   // background: white;
   text-align: left;
-  border: 2px solid black;
+  border: 2px solid #3d3d52;
   outline: 2px solid white;
   display: block;
   max-width: 225px;
+}
+
+
+h1{
+  max-width: 225px;
+  // background: cadetblue;
+  margin: 0 auto;
+  color: #3d3d52;
+  display: inline-block;
 }
 
 .shape-holder{
@@ -98,6 +89,14 @@ h1{
 	     -o-transform: skew(30deg);
 	background: #F15E75;
 }
+
+.greeting-container{
+  margin: 0 auto;
+  display:block;
+  height: 10%;
+  background: #57A2AA;
+}
+
 #welcome-greeting{
   color:black;
   font-weight: 700;

@@ -1,5 +1,10 @@
 .about-container {
-  text-align: center;
-  background-color: #F1CB6D; }
+  background-color: #F1CB6D;
+  position: relative;
+  width: 100%;
+  margin: 0 auto; }
+
+.about-atlas-logo h1 {
+  font-size: 3rem; }
 
 /*# sourceMappingURL=About.css.map */
