@@ -1,13 +1,13 @@
 .product-container {
-  background-color: #F1CB6D;
+  background: #F1CB6D;
   outline: solid black 2px;
   position: relative;
   display: block;
   margin: 10px auto;
+  bottom: 290px;
   padding: 20px;
+  height: 20%;
   width: 40%;
-  height: 40%;
-  bottom: 555px;
   text-align: left; }
 
 .product-container:hover {
@@ -66,9 +66,9 @@
   outline: 2px solid #80682d; }
 
 .product-blurb {
-  color: #F1CB6D;
+  color: #f1cc6da9;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1px;
   margin: 0 auto;
   text-align: left; }

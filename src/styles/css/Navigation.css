@@ -5,62 +5,61 @@
   width: 15%;
   text-align: left;
   margin: 2px;
-  margin-right: 10px;
-  z-index: 1000; }
+  margin-right: 10px; }
 
 .site-nav ul {
   position: relative;
   list-style: none;
   text-decoration: none;
   padding: 4px;
-  line-height: 80px; }
+  line-height: 35px; }
 
 .nav-link {
-  font-size: 1.5rem;
-  line-height: 10px;
+  font-size: 1.2rem;
+  line-height: 4px;
   text-decoration: none;
   font-weight: 600;
   color: #3d3d52;
   margin: 6px;
-  margin-top: 10px; }
+  margin-top: 6px; }
 
 #home-link:hover {
-  padding: 15px;
+  padding: 10px;
   margin: 4px;
   background-color: #F15E75;
   color: white;
   transition: .2s all ease-out; }
 
 #about-link:hover {
-  padding: 15px;
-  margin: 4px;
+  padding: 10px;
+  margin: 2px;
   background-color: #F1CB6D;
   color: white;
   transition: .2s all ease-out; }
 
 #blog-link:hover {
-  padding: 15px;
+  padding: 10px;
   margin: 4px;
   background-color: #57A2AA;
   color: white;
   transition: .2s all ease-out; }
 
 #videos-link:hover {
-  padding: 15px;
+  padding: 10px;
   margin: 4px;
   background-color: #3d3d52;
   color: white;
   transition: .2s all ease-out; }
 
 #cart-link:hover {
-  padding: 15px;
+  padding: 10px;
   margin: 4px;
   background-color: #677DB7;
   color: white;
   transition: .2s all ease-out; }
 
 .login-link:hover {
-  padding: 15px;
+  padding: 10px;
   margin: 4px;
   background-color: #000000;
   color: #F15E75;
