@@ -14,6 +14,7 @@ class Product extends Component {
     let currentProduct = this.props.products[`${productIndex}`];
     let currentPhoto = currentProduct.img;
     let currentPrice = currentProduct.price;
+    let currentBlurb = currentProduct.blurb;
     let currentDescription = currentProduct.description;
 
     console.log(this.props.products[`${productIndex}`]);
@@ -27,7 +28,7 @@ class Product extends Component {
           <p className="product-description">{currentDescription}</p>
           <p className="product-price">${currentPrice}</p>
           <p className="product-blurb">
-            Straight from the Sharpie. Classy move.
+          Straight from the Sharpie. Classy move.
           </p>
           
         </div>

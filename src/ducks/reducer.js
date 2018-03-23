@@ -4,7 +4,6 @@ import axios from 'axios';
 const GET_USER = "GET_USER";
 const GET_PRODUCTS = "GET_PRODUCTS";
 const POST_TO_CART = "POST_TO_CART";
-// const GET_CART = "GET_CART";
 const UPDATE_QTY = "UPDATE_QTY";
 
 
@@ -43,7 +42,7 @@ export function getProducts(){
     payload: axios
     .get('/api/getproducts')
     .then(res =>{
-      console.log(res);
+      console.log("reducer get prod", res.data[0].id);
       return res.data;
     })
     .catch(err => {
@@ -53,11 +52,12 @@ export function getProducts(){
 }
 
 // POST TO CART
-export function postToCart(order_id, description, price){
+export function postToCart( id, description, price, product_id, qty){
   return{
     type: POST_TO_CART,
     payload: axios
-    .post('/api/postcart', {order_id: order_id, description: description, price: price}).then((res) => {
+    .post('/api/postcart', {id:id, description: description, price: price, product_id: product_id, qty: qty}).then((res) => {
+      console.log("ptc reducer", res.data);
       return res.data
     }).catch(err =>{
       console.log(err)
@@ -127,7 +127,7 @@ export function updateQty(qty, order_id){
               });
 
               case `${POST_TO_CART}_FULFILLED`:
-              console.log(action.payload);
+              // console.log(action.payload);
               return Object.assign({}, state, {
                 isLoading: false,
                 didErr: false,

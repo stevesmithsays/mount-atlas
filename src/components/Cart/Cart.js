@@ -9,8 +9,10 @@ class Cart extends Component {
         qty: [],
         order_id: []
       }
+      
       this.qtyHandler = this.qtyHandler.bind(this);
     }
+    
       qtyHandler (qty, order_id) {
         this.setState({
           qty: qty,

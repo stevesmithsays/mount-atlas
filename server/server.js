@@ -111,7 +111,10 @@ app.post('/api/postcart', (req, res) =>{
   const id = req.user.id;
   const description = req.body.description;
   const price = req.body.price;
-  req.app.get("db").postToCart(id, description, price).then(cart => {
+  const product_id = req.body.product_id;
+  const qty = req.body.qty;
+  req.app.get("db").postToCart(id, description, price, product_id, qty).then(cart => {
+    console.log("server now", req);
     res.status(200).json(cart);
   })
   .catch(err => {
