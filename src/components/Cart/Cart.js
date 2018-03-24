@@ -30,7 +30,6 @@ class Cart extends Component {
       grabbedItem = this.props.cart.map((curr, index) => {
         
         return (
-
           <div className="cart-container" key = {index}> 
             <h1 className="cart-header">Shopping Cart.</h1>
             
@@ -42,16 +41,18 @@ class Cart extends Component {
               <p className="cart-price">${curr.price}</p>          
               <p className="cart-qty">{curr.qty}</p>
 
+              <div className="cart-selector">
               <input className="cart-input" type="number" onChange={(e) => this.qtyHandler(e.target.value, curr.order_id)}/>
-
               <button className="add-bttn" onClick={() =>{this.props.updateQty(neededQty, this.state.order_id)}}>
               Add Qty
               </button>    
               <button className="add-bttn">Order</button>
               <button className="add-bttn">Remove</button>
+              </div>
               
             </div>
           </div>)
+        
       })
     }
     return(

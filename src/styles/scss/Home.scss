@@ -1,12 +1,13 @@
 .shop{
-  // background-color: lightgreen;
+  padding: 10px;
+  
 }
-
 .shop-container{
   // background: #F15E75;
   overflow-y: scroll;
-  padding: 20px 50px;
-  width: 50%;
+  padding: 20px;
+  max-width: 650px;
+  width: 55%;
   outline: 2px solid black;
   position: relative;
   display: inline-block;
@@ -93,4 +94,16 @@
   // font-style: italic;
   font-weight: 700;
   transition: .2s all ease-out;
+}
+
+@media screen and (max-width: 500px){
+  .shop-container{
+    transition: .3s all ease-out;
+    background: #57A2AA;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    bottom: 20px;
+  }
+
 }

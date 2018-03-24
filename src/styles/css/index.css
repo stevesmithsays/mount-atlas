@@ -39,6 +39,7 @@ header {
   margin: 5px; }
 
 #atlas-logo {
+  background: white;
   text-align: left;
   border: 2px solid #3d3d52;
   outline: 2px solid white;
@@ -47,6 +48,7 @@ header {
 
 h1 {
   max-width: 225px;
+  line-height: 100%;
   margin: 0 auto;
   color: #3d3d52;
   display: inline-block; }
@@ -85,8 +87,8 @@ h1 {
 #parallelogram3 {
   display: inline-block;
   margin: 0 auto;
-  width: 15%;
   height: 20px;
+  width: 15%;
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
@@ -112,11 +114,21 @@ h1 {
   color: black;
   font-weight: 700; }
 
+@media screen and (max-width: 500px) {
+  body {
+    transition: .5 all ease-out;
+    background: #25252f; }
+
+  #atlas-logo {
+    background: #25252f; } }
+@media screen and (max-width: 500px) {
+  .site-nav {
+    display: none; } }
 .site-nav {
   outline: 2px solid black;
   background-color: white;
   overflow: auto;
-  width: 20%;
+  width: 15%;
   text-align: left;
   margin: 2px;
   margin-right: 10px; }
@@ -145,32 +157,39 @@ h1 {
   transition: .2s all ease-out; }
 
 #about-link:hover {
-  padding: 10px;
+  padding: 8px;
   margin: 2px;
   background-color: #F1CB6D;
   color: white;
   transition: .2s all ease-out; }
 
 #blog-link:hover {
-  padding: 10px;
+  padding: 8px;
   margin: 4px;
   background-color: #57A2AA;
   color: white;
   transition: .2s all ease-out; }
 
 #favorites-link:hover {
-  padding: 10px;
+  padding: 8px;
   margin: 4px;
   background-color: #3d3d52;
   color: white;
   transition: .2s all ease-out; }
 
 #cart-link:hover {
-  padding: 10px;
+  padding: 8px;
   margin: 4px;
   background-color: #677DB7;
   color: white;
   transition: .2s all ease-out; }
+
+#no-cart-link:hover {
+  transition: .3s all ease-out;
+  padding: 10px;
+  margin: 2px;
+  background-color: #F15E75;
+  color: #000000; }
 
 .login-link:hover {
   padding: 10px;
@@ -179,10 +198,14 @@ h1 {
   color: #F15E75;
   transition: .2s all ease-out; }
 
+.shop {
+  padding: 10px; }
+
 .shop-container {
   overflow-y: scroll;
-  padding: 20px 50px;
-  width: 50%;
+  padding: 20px;
+  max-width: 650px;
+  width: 55%;
   outline: 2px solid black;
   position: relative;
   display: inline-block;
@@ -257,6 +280,14 @@ h1 {
   font-weight: 700;
   transition: .2s all ease-out; }
 
+@media screen and (max-width: 500px) {
+  .shop-container {
+    transition: .3s all ease-out;
+    background: #57A2AA;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    bottom: 20px; } }
 .about-container {
   background-color: #F1CB6D;
   position: relative;
@@ -290,10 +321,10 @@ h1 {
   display: block;
   text-align: center;
   margin: 10px auto;
-  padding: 2px;
-  width: 100%;
+  padding: 6px;
+  width: 90%;
   max-width: 400px;
-  bottom: 290px;
+  bottom: 250px;
   text-align: left; }
 
 .cart-header {
@@ -304,6 +335,7 @@ h1 {
   background-color: #5d71a8;
   outline: 2px solid black;
   width: 80%;
+  max-width: 90%;
   height: auto;
   margin: 1rem auto;
   padding: 4px; }
@@ -367,15 +399,21 @@ h1 {
   background-color: #F1CB6D;
   font-size: 1.5em; }
 
+.cart-input {
+  margin: 4px;
+  display: inline-block; }
+
 .add-bttn {
   background: #5d71a8;
   outline: 1px solid #5d71a8;
-  display: inline-block;
   position: relative;
-  margin: 0 auto;
+  display: block;
+  text-align: left;
+  max-width: 100%;
+  width: 100%;
   color: #3c496f;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: .8rem;
   padding: 3px; }
 
 .add-bttn:hover {
@@ -384,6 +422,17 @@ h1 {
   font-weight: 700;
   transition: .3s all ease-out; }
 
+@media screen and (max-width: 500px) {
+  .cart-container {
+    background: #5d71a8;
+    transition: .4s all ease-out;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    bottom: 20px; }
+
+  .image-container {
+    background: #F1CB6D; } }
 .product-container {
   background: #F1CB6D;
   outline: solid black 2px;

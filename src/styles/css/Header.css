@@ -10,6 +10,7 @@ header {
   margin: 5px; }
 
 #atlas-logo {
+  background: white;
   text-align: left;
   border: 2px solid #3d3d52;
   outline: 2px solid white;
@@ -18,6 +19,7 @@ header {
 
 h1 {
   max-width: 225px;
+  line-height: 100%;
   margin: 0 auto;
   color: #3d3d52;
   display: inline-block; }
@@ -56,8 +58,8 @@ h1 {
 #parallelogram3 {
   display: inline-block;
   margin: 0 auto;
-  width: 15%;
   height: 20px;
+  width: 15%;
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
@@ -82,5 +84,13 @@ h1 {
 #welcome-greeting {
   color: black;
   font-weight: 700; }
+
+@media screen and (max-width: 500px) {
+  body {
+    transition: .5 all ease-out;
+    background: #25252f; }
+
+  #atlas-logo {
+    background: #25252f; } }
 
 /*# sourceMappingURL=Header.css.map */

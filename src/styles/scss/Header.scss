@@ -14,7 +14,7 @@ header{
 }
 
 #atlas-logo{
-  // background: white;
+  background: white;
   text-align: left;
   border: 2px solid #3d3d52;
   outline: 2px solid white;
@@ -25,7 +25,7 @@ header{
 
 h1{
   max-width: 225px;
-  // background: cadetblue;
+  line-height: 100%;
   margin: 0 auto;
   color: #3d3d52;
   display: inline-block;
@@ -33,6 +33,7 @@ h1{
 
 .shape-holder{
   display: block;
+  // padding: 1px;
   position: relative;
   max-width: 100%;
   position: relative;
@@ -70,8 +71,8 @@ h1{
   display: inline-block;
   // position:fixed;
   margin:0 auto;
-	width: 15%;
 	height: 20px;
+	width: 15%;
 	-webkit-transform: skew(-40deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(30deg);
@@ -101,3 +102,20 @@ h1{
   color:black;
   font-weight: 700;
 }
+
+@media screen and (max-width: 500px){
+  body{
+    transition: .5 all ease-out;
+    background: #25252f;
+  }
+  #atlas-logo{
+    background: #25252f;
+  }
+  // #atlas-logo h1{
+  //   font-style: italic;
+  // }
+
+  // #atlas-logo{
+  //   background: linear-gradient(to right,#677DB7, #F1CB6D, #57A2AA, #F15E75);
+  // }
+ }

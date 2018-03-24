@@ -15,7 +15,7 @@ const Navigation = (props) => (
       
 
       {props.user.id ?
-      <li><Link to="/cart" className="nav-link" id="cart-link">Cart</Link></li> : <li><li><Link to="/cart" className="nav-link" id="cart-link">No Cart</Link></li></li>}
+      <li><Link to="/cart" className="nav-link" id="cart-link">Cart</Link></li> : <li><li><Link to="/cart" className="nav-link" id="no-cart-link">NoCart</Link></li></li>}
 
       {props.user.id ? 
         <li><a href={process.env.REACT_APP_LOGOUT} className="nav-link login-link">Logout</a></li> : <li><a href={process.env.REACT_APP_LOGIN} className="nav-link login-link">Login</a></li>}         
