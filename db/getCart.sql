@@ -1,1 +1,0 @@
-SELECT * FROM carts where order_id = $1

@@ -4,6 +4,8 @@ import axios from 'axios';
 const GET_USER = "GET_USER";
 const GET_PRODUCTS = "GET_PRODUCTS";
 const POST_TO_CART = "POST_TO_CART";
+const POST_FAVORITES = "POST_FAVORITES";
+const REMOVE_CART = "REMOVE_CART";
 const UPDATE_QTY = "UPDATE_QTY";
 
 
@@ -42,7 +44,7 @@ export function getProducts(){
     payload: axios
     .get('/api/getproducts')
     .then(res =>{
-      console.log("reducer get prod", res.data[0].id);
+      // console.log("reducer get prod", res.data[0].id);
       return res.data;
     })
     .catch(err => {
@@ -56,8 +58,8 @@ export function postToCart( id, description, price, product_id, qty){
   return{
     type: POST_TO_CART,
     payload: axios
-    .post('/api/postcart', {id:id, description: description, price: price, product_id: product_id, qty: qty}).then((res) => {
-      console.log("ptc reducer", res.data);
+    .post('/api/postcart', {id:id, description: description, price: price, product_id: product_id, qty: qty }).then((res) => {
+      console.log("ptc reducer", res);
       return res.data
     }).catch(err =>{
       console.log(err)
@@ -67,7 +69,7 @@ export function postToCart( id, description, price, product_id, qty){
 
 // QUANTITY PUT REQ
 export function updateQty(qty, order_id){
-  console.log("hit qty", qty, "order_id", order_id);
+  // console.log("hit qty", qty, "order_id", order_id);
   return{
     type: UPDATE_QTY,
     payload: axios
@@ -77,6 +79,21 @@ export function updateQty(qty, order_id){
     }).catch(err =>{
       console.log(err)
     })
+  }
+}
+
+// POST FAVORITES
+export function postFavorites(id){
+  console.log("post fav reducer", id)
+  return{
+    type: POST_FAVORITES,
+    payload: axios
+    .post('/api/favorites',{
+      id}).then((res) => {
+        return res.data
+      }).catch( err => {
+        console.log(err)
+      })
   }
 }
 
@@ -127,7 +144,7 @@ export function updateQty(qty, order_id){
               });
 
               case `${POST_TO_CART}_FULFILLED`:
-              // console.log(action.payload);
+              console.log("ptc", action.payload);
               return Object.assign({}, state, {
                 isLoading: false,
                 didErr: false,
@@ -140,6 +157,28 @@ export function updateQty(qty, order_id){
                 didErr: true,
                 errMessage: action.payload
               });
+
+      // POST FAVORITES
+              case `${POST_FAVORITES}_PENDING`:
+              return Object.assign({}, state, {
+                isLoading: true
+              });
+
+              case `${POST_FAVORITES}_FULFILLED`:
+              // console.log(action.payload);
+              return Object.assign({}, state, {
+                isLoading: false,
+                didErr: false,
+                cart: action.payload
+              });
+
+              case `${POST_FAVORITES}_REJECTED`:
+              return Object.assign({}, state, {
+                isLoading: false,
+                didErr: true,
+                errMessage: action.payload
+              });
+
       // UPDATE QTY
             case `${UPDATE_QTY}_PENDING`:        
             return Object.assign({}, state, {
@@ -155,7 +194,7 @@ export function updateQty(qty, order_id){
             });
 
             case `${UPDATE_QTY}_REJECTED`:
-            console.log("muthasucka rejected", action.type);
+            // console.log("reducer rejected", action.type);
             return Object.assign({}, state, {
               isLoading: false,
               didErr: true,

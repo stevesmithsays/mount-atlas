@@ -1,0 +1,1 @@
+INSERT into favorites ( favdprod_id, favduser_id) VALUES( $1, $2); 

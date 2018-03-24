@@ -22,17 +22,18 @@ class Cart extends Component {
       }
   render(){
     let neededQty = parseInt(this.state.qty);
-    console.log("cart log now", typeof neededQty);
+    // console.log("cart log now", typeof neededQty);
     let grabbedItem;
-  
+    
     if(this.props.cart !== undefined && this.props.cart.length !== 0){
+      console.log('cart render', this.props.cart);
       grabbedItem = this.props.cart.map((curr, index) => {
         
         return (
+
           <div className="cart-container" key = {index}> 
             <h1 className="cart-header">Shopping Cart.</h1>
             
-
             <div className="image-container">
 
               <img src={curr.img ? require(`../../images/${curr.img}`) : null} className="product-img" alt="product images"/>
@@ -48,6 +49,7 @@ class Cart extends Component {
               </button>    
               <button className="add-bttn">Order</button>
               <button className="add-bttn">Remove</button>
+              
             </div>
           </div>)
       })

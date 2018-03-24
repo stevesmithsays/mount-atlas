@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux"; 
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
-import { getProducts } from "../../ducks/reducer";
-import { postToCart } from "../../ducks/reducer";
+import { getProducts, postToCart, postFavorites } from "../../ducks/reducer";
 
 
 class Home extends Component {
@@ -17,13 +16,12 @@ class Home extends Component {
       let price = this.props.products;
       // let productID= this.props.products[0];
       // console.log("this is the id", productID.id);
-      
-      
+    
       let productList;
 
       if(this.props.products.length !== undefined && this.props.products.length !==0){
         productList = this.props.products.map((curr, index) => {
-          console.log("this is curr", curr);
+          console.log("this is curr", this.props.products);
           return (
               <div className="product-box" key = {index}>
                   <Link to = {`/product/${index}`} key = {index}>
@@ -37,8 +35,9 @@ class Home extends Component {
 
                     <Link to="/Cart">
                     
-                      <button className="add-btn" onClick={() => this.props.postToCart(curr.order_id, curr.description, curr.price, curr.id)}>Send It
+                      <button className="add-btn" onClick={() => this.props.postToCart(curr.order_id, curr.description, curr.price, curr.id, curr.qty)}>Send It
                       </button>
+                      <button className="add-btn" onClick={() => this.props.postFavorites(curr.id)}>Favorite</button>
                 
                     </Link>   
               </div>
@@ -58,6 +57,6 @@ class Home extends Component {
 
 const mapStateToProps = state => state;
 
-export default withRouter(connect(mapStateToProps, { getProducts, postToCart } )(Home));
+export default withRouter(connect(mapStateToProps, { getProducts, postToCart, postFavorites } )(Home));
 
 // <Link to = {`/products/${index}`} key = {index}>

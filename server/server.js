@@ -114,13 +114,26 @@ app.post('/api/postcart', (req, res) =>{
   const product_id = req.body.product_id;
   const qty = req.body.qty;
   req.app.get("db").postToCart(id, description, price, product_id, qty).then(cart => {
-    console.log("server now", req);
+    console.log("server now", req.body);
     res.status(200).json(cart);
   })
   .catch(err => {
     res.status(500).json(err);
   })
 })
+
+// POST FAVORITES
+app.post('/api/favorites', (req, res) =>{
+  console.log("post faves", req.user);
+  req.app.get("db").postFavorites([req.body.id, req.user.id])
+  .then(favorites => {
+    res.status(200).json(favorites)
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+})
+
 
 // UPDATE QUANTITY / PUT
 app.put('/api/updatecart',(req, res) => {

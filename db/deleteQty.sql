@@ -1,0 +1,1 @@
+DELETE from carts where qty > 1;
