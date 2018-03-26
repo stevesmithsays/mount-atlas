@@ -72,7 +72,7 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #677DB7; }
+  background: #677db7; }
 
 #parallelogram2 {
   display: inline-block;
@@ -92,7 +92,7 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 #parallelogram4 {
   display: inline-block;
@@ -102,13 +102,13 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #F15E75; }
+  background: #f15e75; }
 
 .greeting-container {
   margin: 0 auto;
   display: block;
   height: 10%;
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 #welcome-greeting {
   color: black;
@@ -152,7 +152,7 @@ h1 {
 #home-link:hover {
   padding: 10px;
   margin: 4px;
-  background-color: #F15E75;
+  background-color: #f15e75;
   color: white;
   transition: .2s all ease-out; }
 
@@ -166,7 +166,7 @@ h1 {
 #blog-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #57A2AA;
+  background-color: #57a2aa;
   color: white;
   transition: .2s all ease-out; }
 
@@ -180,7 +180,7 @@ h1 {
 #cart-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #677DB7;
+  background-color: #677db7;
   color: white;
   transition: .2s all ease-out; }
 
@@ -188,14 +188,14 @@ h1 {
   transition: .3s all ease-out;
   padding: 10px;
   margin: 2px;
-  background-color: #F15E75;
+  background-color: #f15e75;
   color: #000000; }
 
 .login-link:hover {
   padding: 10px;
   margin: 4px;
   background-color: #000000;
-  color: #F15E75;
+  color: #f15e75;
   transition: .2s all ease-out; }
 
 .shop {
@@ -253,7 +253,7 @@ h1 {
   min-width: 50%;
   margin: 1px auto;
   outline: 1px solid black;
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 .prod-thing p {
   color: #448087;
@@ -266,7 +266,7 @@ h1 {
   color: white; }
 
 .add-btn {
-  background: #57A2AA;
+  background: #57a2aa;
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -283,7 +283,7 @@ h1 {
 @media screen and (max-width: 500px) {
   .shop-container {
     transition: .3s all ease-out;
-    background: #57A2AA;
+    background: #57a2aa;
     position: relative;
     align-items: center;
     padding: 10px;
@@ -298,7 +298,7 @@ h1 {
   font-size: 3rem; }
 
 .blog-container {
-  background-color: #57A2AA;
+  background-color: #57a2aa;
   position: relative;
   width: 100%;
   margin: 0 auto; }

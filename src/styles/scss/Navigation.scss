@@ -1,3 +1,14 @@
+// COLOR SWATCH SITE-WIDE
+$atlas-yellow: #F1CB6D;
+$atlas-red: #f15e75;
+$atlas-teal: #57a2aa;
+$atlas-grey: #3d3d52;
+$atlas-blue: #677db7;
+$atlas-purp:#5d71a8;
+$atlas-dpurp:#3c496f;
+$atlas-black: #25252f;
+
+
 @media screen and (max-width: 500px){
  .site-nav{
    display: none;
@@ -14,13 +25,15 @@
   margin-right: 10px;
 }
 
-.site-nav ul {
-  position: relative;
-  list-style: none;
-  text-decoration: none;
-  padding: 4px;
-  line-height: 35px
-  // line-height: 60px;
+.site-nav{ 
+    ul {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    padding: 4px;
+    line-height: 35px
+    // line-height: 60px;
+  }
 }
 
 .nav-link{
@@ -37,7 +50,7 @@
 #home-link:hover{
   padding: 10px;
   margin: 4px;
-  background-color: #F15E75;
+  background-color: $atlas-red;
   color: white;
   transition: .2s all ease-out;
   // box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
@@ -46,7 +59,7 @@
 #about-link:hover{
   padding: 8px;
   margin: 2px;
-  background-color: #F1CB6D;
+  background-color: $atlas-yellow;
   color: white;
   transition: .2s all ease-out;
 }
@@ -54,7 +67,7 @@
 #blog-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #57A2AA;
+  background-color: $atlas-teal;
   color: white;
   transition: .2s all ease-out;
 }
@@ -62,7 +75,7 @@
 #favorites-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #3d3d52;
+  background-color: $atlas-grey;
   color: white;
   transition: .2s all ease-out;
 }
@@ -70,7 +83,7 @@
 #cart-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #677DB7;
+  background-color: $atlas-blue;
   color: white;
   transition: .2s all ease-out;
 }
@@ -79,7 +92,7 @@
   transition: .3s all ease-out;
   padding: 10px;
   margin: 2px;
-  background-color: #F15E75;
+  background-color: $atlas-red;
   color: #000000;
 }
 
@@ -87,7 +100,7 @@
   padding: 10px;
   margin: 4px;
   background-color: #000000;
-  color: #F15E75;
+  color: $atlas-red;
   transition: .2s all ease-out;
 }
 

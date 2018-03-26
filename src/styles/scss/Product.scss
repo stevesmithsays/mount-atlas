@@ -1,5 +1,5 @@
 .product-container{
-  background:#F1CB6D;
+  background: $atlas-yellow;
   // background-color: #f1cc6da9;
   outline: solid black 2px;
   position: relative;
@@ -32,7 +32,7 @@
   height: auto;
   display: inline-block;
   padding: 2px;
-  outline: 2px solid #3c496f;
+  outline: 2px solid $atlas-dpurp;
 }
 
 .product-foto:hover{
@@ -46,22 +46,22 @@
   margin: 0 1px;
   font-weight: 700;
   font-size: 2rem;
-  color: #F1CB6D;
-  background-color: #5d71a8;
-  outline: 2px solid #3c496f;
+  color: $atlas-yellow;
+  background-color: $atlas-purp;
+  outline: 2px solid $atlas-dpurp;
 }
 
 .product-description:hover{
   transition: .3s all ease-out;
-  background-color:#F1CB6D;
+  background-color:$atlas-yellow;
   outline: 2px solid #80682d;
-  color:#5d71a8;
+  color:$atlas-purp;
 }
 
 .product-price{
-  background-color: #5d71a8;
-  color: #F1CB6D;
-  outline: 2px solid #3c496f;
+  background-color: $atlas-purp;
+  color: $atlas-yellow;
+  outline: 2px solid $atlas-dpurp;
   font-size: 1.9rem;
   margin: 1px;
   margin-top: 3px;
@@ -70,8 +70,8 @@
 
 .product-price:hover{
   transition: .2s all ease-out;
-  color: #5d71a8;
-  background-color:#F1CB6D;
+  color: $atlas-purp;
+  background-color: $atlas-yellow;
   outline: 2px solid #80682d;
 }
 
@@ -87,7 +87,7 @@
 
 .product-blurb:hover{
   transition: .3s all ease-out;
-  color: #5d71a8;
+  color: $atlas-purp;
   // background-color:#F1CB6D;
   // outline: 2px solid #80682d; 
 }

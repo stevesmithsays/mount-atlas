@@ -1,5 +1,15 @@
+// COLOR SWATCH SITE-WIDE
+$atlas-yellow: #F1CB6D;
+$atlas-red: #f15e75;
+$atlas-teal: #57a2aa;
+$atlas-grey: #3d3d52;
+$atlas-blue: #677db7;
+$atlas-purp:#5d71a8;
+$atlas-dpurp:#3c496f;
+$atlas-black: #25252f;
+
 .cart-container{
-  background-color: #F1CB6D;
+  background-color: $atlas-yellow;
   outline: solid black 2px;
   position: relative;
   display: block;
@@ -19,7 +29,7 @@
 }
 
 .image-container{
-  background-color: #5d71a8;
+  background-color: $atlas-purp;
   outline: 2px solid black;
   width: 80%;
   max-width: 90%;
@@ -29,7 +39,7 @@
 }
 
 .product-img{
-  outline: 2px solid #3c496f;
+  outline: 2px solid $atlas-dpurp;
   position: relative;
   width: 60%;
   max-width: 62%;
@@ -41,8 +51,8 @@
 
 .product-img:hover{
   transition: .3s all ease-out;
-  background: #F1CB6D;
-  outline: 2px solid #3c496f;
+  background: $atlas-yellow;
+  outline: 2px solid $atlas-dpurp;
   box-shadow: 0 4px 10px 0 #00000063, 0 0 0 1px #00000014;
   width:62%;
 }
@@ -51,21 +61,21 @@
   margin: 0 1px;
   font-weight: 700;
   font-size: 2rem;
-  color: #F1CB6D;
-  background-color: #5d71a8;
-  outline: 2px solid #3c496f;
+  color: $atlas-yellow;
+  background-color: $atlas-purp;
+  outline: 2px solid $atlas-dpurp;
 }
 
 .cart-description:hover{
   transition: .3s all ease-out;
-  color:#5d71a8;
-  background-color: #F1CB6D;
+  color: $atlas-purp;
+  background-color: $atlas-yellow;
 }
 
 .cart-price{
-  background-color: #5d71a8;
-  color: #F1CB6D;
-  outline: 2px solid #3c496f;
+  background-color: $atlas-purp;
+  color: $atlas-yellow;
+  outline: 2px solid $atlas-dpurp;
   margin: 1px;
   margin-top: 3px;
   font-size: 1.5rem;
@@ -75,13 +85,13 @@
 .cart-price:hover{
   transition: .3s all ease-out;
   color:#5d71a8;
-  background-color: #F1CB6D;
+  background-color: $atlas-yellow;
 }
 
 .cart-qty{
-  background-color: #5d71a8;
-  color: #F1CB6D;
-  outline: 2px solid #3c496f;
+  background-color: $atlas-purp;
+  color: $atlas-yellow;
+  outline: 2px solid $atlas-dpurp;
   margin: 1px;
   margin-top: 3px;
   font-weight: 700;
@@ -90,8 +100,8 @@
 
 .cart-qty:hover{
   transition: .2s all ease-out;
-  color:#5d71a8;
-  background-color: #F1CB6D;
+  color: $atlas-purp;
+  background-color: $atlas-yellow;
   font-size:1.5em;
 }
 
@@ -109,22 +119,22 @@
 
 
 .add-bttn{
-  background: #5d71a8;
-  outline: 1px solid #5d71a8;
+  background: $atlas-purp;
+  outline: 1px solid $atlas-purp;
   position: relative;
   display: block;
   text-align: left;
   max-width: 100%;
   width: 100%;
   // margin: 0 auto;
-  color:#3c496f;
+  color: $atlas-dpurp;
   font-weight: 700;
   font-size: .8rem;
   padding: 3px;
 }
 
 .add-bttn:hover{
-  color:#F1CB6D;
+  color: $atlas-yellow;
   position: static;
   font-weight: 700;
   transition: .3s all ease-out;
@@ -132,7 +142,7 @@
 
 @media screen and (max-width: 500px){
   .cart-container{
-    background: #5d71a8;
+    background: $atlas-purp;
     transition: .4s all ease-out;
     position: relative;
     align-items: center;
@@ -140,7 +150,7 @@
     bottom: 20px;
   }
   .image-container{
-    background: #F1CB6D;
+    background: $atlas-yellow;
   }
 
 }

@@ -1,3 +1,13 @@
+// COLOR SWATCH SITE-WIDE
+$atlas-yellow: #F1CB6D;
+$atlas-red: #f15e75;
+$atlas-teal: #57a2aa;
+$atlas-grey: #3d3d52;
+$atlas-blue: #677db7;
+$atlas-purp:#5d71a8;
+$atlas-dpurp:#3c496f;
+$atlas-black: #25252f;
+
 
 header{
   // background-color: grey;
@@ -16,7 +26,7 @@ header{
 #atlas-logo{
   background: white;
   text-align: left;
-  border: 2px solid #3d3d52;
+  border: 2px solid $atlas-grey;
   outline: 2px solid white;
   display: block;
   max-width: 225px;
@@ -37,7 +47,7 @@ h1{
   position: relative;
   max-width: 100%;
   position: relative;
-  background: #3d3d52;
+  background: $atlas-grey;
   line-height: 2px;
   text-align: center;
   margin: 0 auto;
@@ -52,7 +62,7 @@ h1{
 	-webkit-transform: skew(-40deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(30deg);
-	background: #677DB7;
+	background: $atlas-blue;
 }
 
 #parallelogram2 {
@@ -64,7 +74,7 @@ h1{
 	-webkit-transform: skew(-40deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(30deg);
-	background: #F1CB6D;
+	background: $atlas-yellow
 }
 
 #parallelogram3 {
@@ -76,7 +86,7 @@ h1{
 	-webkit-transform: skew(-40deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(30deg);
-	background: #57A2AA;
+	background: $atlas-teal
 }
 
 #parallelogram4 {
@@ -88,14 +98,14 @@ h1{
 	-webkit-transform: skew(-40deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(30deg);
-	background: #F15E75;
+	background: $atlas-red
 }
 
 .greeting-container{
   margin: 0 auto;
   display:block;
   height: 10%;
-  background: #57A2AA;
+  background: $atlas-teal
 }
 
 #welcome-greeting{
@@ -111,11 +121,4 @@ h1{
   #atlas-logo{
     background: #25252f;
   }
-  // #atlas-logo h1{
-  //   font-style: italic;
-  // }
-
-  // #atlas-logo{
-  //   background: linear-gradient(to right,#677DB7, #F1CB6D, #57A2AA, #F15E75);
-  // }
  }

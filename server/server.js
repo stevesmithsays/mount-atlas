@@ -6,11 +6,13 @@ const cors = require("cors");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const massive = require("massive");
-const path = require("path");
+
 
 const port = 3001;
 
 const app = express();
+
+app.use( express.static(`${__dirname}/../build`) );
 
 const { 
   CONNECTION_STRING, 
@@ -177,6 +179,11 @@ app.get('/api/logout', (req, res) => {
     res.redirect('http://localhost:3000/#/');
   });
 });
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})
 
 app.listen(port, () =>{
   console.log(`jammin' on teh Port: ${port} mon`);

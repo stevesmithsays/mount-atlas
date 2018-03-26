@@ -43,7 +43,7 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #677DB7; }
+  background: #677db7; }
 
 #parallelogram2 {
   display: inline-block;
@@ -63,7 +63,7 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 #parallelogram4 {
   display: inline-block;
@@ -73,13 +73,13 @@ h1 {
   -webkit-transform: skew(-40deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(30deg);
-  background: #F15E75; }
+  background: #f15e75; }
 
 .greeting-container {
   margin: 0 auto;
   display: block;
   height: 10%;
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 #welcome-greeting {
   color: black;

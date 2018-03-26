@@ -53,7 +53,7 @@
   min-width: 50%;
   margin: 1px auto;
   outline: 1px solid black;
-  background: #57A2AA; }
+  background: #57a2aa; }
 
 .prod-thing p {
   color: #448087;
@@ -66,7 +66,7 @@
   color: white; }
 
 .add-btn {
-  background: #57A2AA;
+  background: #57a2aa;
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -83,7 +83,7 @@
 @media screen and (max-width: 500px) {
   .shop-container {
     transition: .3s all ease-out;
-    background: #57A2AA;
+    background: #57a2aa;
     position: relative;
     align-items: center;
     padding: 10px;

@@ -29,7 +29,7 @@
 #home-link:hover {
   padding: 10px;
   margin: 4px;
-  background-color: #F15E75;
+  background-color: #f15e75;
   color: white;
   transition: .2s all ease-out; }
 
@@ -43,7 +43,7 @@
 #blog-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #57A2AA;
+  background-color: #57a2aa;
   color: white;
   transition: .2s all ease-out; }
 
@@ -57,7 +57,7 @@
 #cart-link:hover {
   padding: 8px;
   margin: 4px;
-  background-color: #677DB7;
+  background-color: #677db7;
   color: white;
   transition: .2s all ease-out; }
 
@@ -65,14 +65,14 @@
   transition: .3s all ease-out;
   padding: 10px;
   margin: 2px;
-  background-color: #F15E75;
+  background-color: #f15e75;
   color: #000000; }
 
 .login-link:hover {
   padding: 10px;
   margin: 4px;
   background-color: #000000;
-  color: #F15E75;
+  color: #f15e75;
   transition: .2s all ease-out; }
 
 /*# sourceMappingURL=Navigation.css.map */

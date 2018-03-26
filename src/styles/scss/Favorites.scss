@@ -1,6 +1,6 @@
 .favorites-container{
   position: relative;
-  background-color: #3d3d52;
+  background-color: $atlas-grey;
   margin: 0 auto;
   max-width: 250px;
   width: 100%;
@@ -9,7 +9,7 @@
 
 .favorites-atlas-logo h1{
   color: white;
-  background:#3d3d52;
+  background: $atlas-grey;
   font-size: 3rem;
 }
 .somethin{

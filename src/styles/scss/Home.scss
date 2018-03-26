@@ -1,3 +1,13 @@
+// COLOR SWATCH SITE-WIDE
+$atlas-yellow: #F1CB6D;
+$atlas-red: #f15e75;
+$atlas-teal: #57a2aa;
+$atlas-grey: #3d3d52;
+$atlas-blue: #677db7;
+$atlas-purp:#5d71a8;
+$atlas-dpurp:#3c496f;
+$atlas-black: #25252f;
+
 .shop{
   padding: 10px;
   
@@ -35,7 +45,7 @@
 
 .product-photo{
   outline: 2px solid white;
-  background: #3d3d52;
+  background: $atlas-grey;
   position: relative;
   margin: 2px auto;
   max-width:95%;
@@ -47,7 +57,7 @@
 
 .product-photo:hover{
   transition: .2s all ease-out;
-  outline: 2px solid #3d3d52;
+  outline: 2px solid $atlas-grey;
 }
 
 .rotated{
@@ -62,7 +72,7 @@
   min-width: 50%;
   margin: 1px auto;
   outline: 1px solid black;
-  background: #57A2AA;
+  background: $atlas-teal;
 }
 
 .prod-thing p{
@@ -79,7 +89,7 @@
 
 
 .add-btn{
-  background: #57A2AA;
+  background: $atlas-teal;
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -99,7 +109,7 @@
 @media screen and (max-width: 500px){
   .shop-container{
     transition: .3s all ease-out;
-    background: #57A2AA;
+    background: $atlas-teal;
     position: relative;
     align-items: center;
     padding: 10px;
