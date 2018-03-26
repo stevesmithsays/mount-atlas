@@ -1,1 +1,1 @@
-DELETE from carts where qty > 1;
+DELETE from carts WHERE id = $1 AND product_id = $2;

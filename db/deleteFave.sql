@@ -1,0 +1,1 @@
+DELETE from favorites WHERE favdprod_id = $1;

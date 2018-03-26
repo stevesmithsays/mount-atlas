@@ -124,7 +124,7 @@ app.post('/api/postcart', (req, res) =>{
 
 // POST FAVORITES
 app.post('/api/favorites', (req, res) =>{
-  console.log("post faves", req.user);
+  console.log("post favorites, req.body.id", req.body.id);
   req.app.get("db").postFavorites([req.body.id, req.user.id])
   .then(favorites => {
     res.status(200).json(favorites)
@@ -134,6 +134,31 @@ app.post('/api/favorites', (req, res) =>{
   })
 })
 
+// VIEW FAVORITES
+app.post('/api/viewfavorites', (req, res) => {
+  // console.log('view faves', req.body)
+  req.app.get("db").viewFavorites(req.body.favduser_id)
+  .then( favorites => {
+    // console.log("favorites from promise", favorites)
+    res.status(200).json(favorites)
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+})
+
+// DELETE FAVORITES
+app.delete('/api/deletefave', (req, res) => {
+console.log(req.body.favdprod_id)
+  req.app.get("db").deleteFave(req.body.favdprod_id)
+  .then(favorites => {
+    console.log("delete faves server", favorites)
+    res.status(200).json(favorites)
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  })
+})
 
 // UPDATE QUANTITY / PUT
 app.put('/api/updatecart',(req, res) => {
@@ -156,7 +181,6 @@ app.get('/api/logout', (req, res) => {
 app.listen(port, () =>{
   console.log(`jammin' on teh Port: ${port} mon`);
 });
-
 
 // Hosting purposes
 // Digital Ocean

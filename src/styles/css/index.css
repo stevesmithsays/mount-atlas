@@ -308,11 +308,21 @@ h1 {
 
 .favorites-container {
   position: relative;
-  background-color: #3d3d52; }
+  background-color: #3d3d52;
+  margin: 0 auto;
+  max-width: 250px;
+  width: 100%;
+  bottom: 150px; }
 
 .favorites-atlas-logo h1 {
   color: white;
+  background: #3d3d52;
   font-size: 3rem; }
+
+.somethin {
+  height: 150px;
+  width: 200px;
+  background: lightcoral; }
 
 .cart-container {
   background-color: #F1CB6D;

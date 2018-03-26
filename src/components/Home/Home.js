@@ -10,18 +10,15 @@ class Home extends Component {
         this.props.getProducts(); 
     }
     render(){
-    console.log("from home");
       let id = this.props.user.id;
       let description = this.props.products;
       let price = this.props.products;
       // let productID= this.props.products[0];
-      // console.log("this is the id", productID.id);
-    
+      
       let productList;
 
       if(this.props.products.length !== undefined && this.props.products.length !==0){
         productList = this.props.products.map((curr, index) => {
-          console.log("this is curr", this.props.products);
           return (
               <div className="product-box" key = {index}>
                   <Link to = {`/product/${index}`} key = {index}>
@@ -33,13 +30,12 @@ class Home extends Component {
                       <p>${curr.price}</p>
                       </div>
 
-                    <Link to="/Cart">
-                    
+                    <Link to="/Cart">                    
                       <button className="add-btn" onClick={() => this.props.postToCart(curr.order_id, curr.description, curr.price, curr.id, curr.qty)}>Send It
-                      </button>
-                      <button className="add-btn" onClick={() => this.props.postFavorites(curr.id)}>Favorite</button>
-                
+                      </button>                
                     </Link>   
+                    <Link to="/Favorites"><button className="add-btn" onClick={() =>  this.props.postFavorites(curr.id)}>Favorite</button>
+                    </Link>
               </div>
           )
         })
