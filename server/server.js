@@ -8,7 +8,7 @@ const Auth0Strategy = require("passport-auth0");
 const massive = require("massive");
 
 
-const port = 3001;
+const port =  process.env.PORT || 3001;
 
 const app = express();
 
@@ -80,8 +80,8 @@ passport.deserializeUser((user, done) => done(null, user));
 app.get(
   '/auth', 
   passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000/#/',
-  failureRedirect: 'http://localhost:3000/#/auth'
+  successRedirect: '/#/',
+  failureRedirect: '/#/auth'
   })
 );
 
@@ -91,7 +91,7 @@ app.get('/api/me', (req, res) =>{
   if(req.user) {
   res.status(200).json(req.user)
 } else {
-    res.redirect('http://localhost:3000/#/login');
+    res.redirect('/#/login');
   }
 });
 
@@ -176,7 +176,7 @@ app.put('/api/updatecart',(req, res) => {
 // LOGOUT ENDPOINT / SESSION END
 app.get('/api/logout', (req, res) => {
   req.session.destroy( () => {
-    res.redirect('http://localhost:3000/#/');
+    res.redirect('/#/');
   });
 });
 
